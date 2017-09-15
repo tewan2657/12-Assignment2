@@ -15,20 +15,18 @@ public class Problem1 {
      * @param args the command line arguments
      */
     public static int digitalSum(int n) {
+      int sum = n; 
         //base Case
         // checking if the number is a single digit
-
-        if (n / 10 == 0) {
+        if(n == 0) {
+            return sum;
+        }else{
+         
+        }       
             return n;
-        } else {
-            for (int i = 0; i < n; i++) {
-                i = n / 10;
-                n = i + n % 10;
-
-
-            }
-            return n;
-        }
+        
+        
+        
 
     }
 
