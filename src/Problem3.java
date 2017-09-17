@@ -16,19 +16,16 @@ public class Problem3 {
      * @param args the command line arguments
      */
     public static int triangle(int n) {
-        int counter =0;
         //base case
-        if(n == 1|| n==0){
-         return n;   
-        }else if (n>=2){
-        counter = 2; 
+        if(n <= 0){
+         return n;  
+         // add n -1 to n 
+        }else{
+          return n + triangle(n-1);  
+       
         }
-            
-      return n;  
-        
-    
+       
     }
-
     public static void main(String[] args) {
         // create a scanner 
         Scanner input = new Scanner(System.in);
@@ -37,6 +34,7 @@ public class Problem3 {
         System.out.println("Input a number");
         int n = input.nextInt();
         
+        //print the number of blocks
         int trap = triangle(n);
         System.out.println("The triangle is made up of " + trap + " block(s)");
     }
