@@ -13,29 +13,28 @@ public class Problem5 {
     /**
      * @param args the command line arguments
      */
-    int count = 0;
-    
-    public int binaryConvert(int n){
-        while(n!=0){
-         if(n % 2 == 0){
-          count += n/2;  
-          
-         }
-         
+    public int binaryConvert(int n) {
+        //variable
+        int binary = 0;
+
+        //base case
+        if (n >= 1) {
+            binaryConvert(n / 2);
+            binary = n % 2;
+            System.out.print(binary);
+
+
+
         }
+        return binary;
         
-     return count;   
     }
-    
-    
-    
-    
+
     public static void main(String[] args) {
         // TESTING METHOD ABOVE
         Problem5 test = new Problem5();
-        
-        int a = test.binaryConvert(46);
+
+       int a = test.binaryConvert(45);
         System.out.println(a);
     }
-    
 }
