@@ -14,31 +14,31 @@ public class Problem1 {
     /**
      * @param args the command line arguments
      */
-    
-   int sum = 0;
+    int sum = 0;
     public int digitalSum(int n) {
-              
+
         //base Case
         // checking if the number is less than or equal to zero 
         if (n <= 0) {
             return sum;
         } else {
             //find remainder
-            sum += (n%10);
+            sum += (n % 10);
             //once remainder has been found, move to the next digit to the left
-            digitalSum(n/10);
-        
-        return sum;
+            digitalSum(n / 10);
+
+            return sum;
         }
     }
 
     public static void main(String[] args) {
         // Testing Method Above
-      Problem1 test = new Problem1();
-      
+        Problem1 test = new Problem1();
+
+        //Print
         int a = test.digitalSum(675);
         System.out.println("Sum of Digits: " + a);
-        
-        
+
+
     }
 }

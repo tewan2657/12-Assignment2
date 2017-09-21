@@ -13,20 +13,22 @@ public class Problem5 {
     /**
      * @param args the command line arguments
      */
-    public int binaryConvert(int n) {
-        //variable
-        int binary = 0;
+    String sbinary = "";
+    public String binaryConvert(int n) {
+     //base case
+      if(n < 2){
+        sbinary = "" + n;
+        return sbinary;
+    }
 
         //base case
-        if (n >= 1) {
+        if (n != 0) {
             binaryConvert(n / 2);
-            binary = n % 2;
-            System.out.print(binary);
-
-
+            sbinary += n % 2;
+            
 
         }
-        return binary;
+        return sbinary;
         
     }
 
@@ -34,7 +36,7 @@ public class Problem5 {
         // TESTING METHOD ABOVE
         Problem5 test = new Problem5();
 
-       int a = test.binaryConvert(45);
+       String a = test.binaryConvert(1000);
         System.out.println(a);
     }
 }
